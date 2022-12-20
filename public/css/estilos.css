@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:');
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --white-2: rgb(199, 199, 199);
+    --gray: rgb(46, 46, 46);
+    --gray-2: #262626;
+    --pink:rgb(255, 0, 106);
+    --pink-2:rgb(126, 1, 53); 
+    --links: rgba(225,225,225,.8);
+    --links-hover: rgba(225,225,225,1);
+    --img-home: url(../img/portafolio-home.webp);
+    --bg-descripcion: rgba(0, 0, 0, .75);
+    --img-skill-size: 60px;
+    --bg-skill-bar: linear-gradient(160deg, var(--white) 0%, var(--pink) 15%, var(--pink-2) 100%);
+    --box-shadow-card: 3px 3px 10px var(--white);
+}
+
+*{
+    outline: none !important;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* INICIO DEL HEADER */
+header{
+    position: relative;
+    z-index: 1000000;
+}
+p{
+    font-size: 1.15rem;
+}
+.navbar{
+    background: rgba(0, 0, 0, 0.973) !important;
+    transition: 0.5s;
+}
+.container span{
+    color: var(--links);
+}
+.navbar.scrolled{
+    background: var(--black) !important;
+    transition: 0.5s;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: var(--black) !important;
+    background: var(--white);
+}
+.navbar-light .navbar-nav .active> .nav-link:hover
+{
+  color: var(--black);
+}
+.navbar-light .navbar-nav .nav-link
+{
+  color: var(--links) !important;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus
+{
+  color: var(--pink) !important;
+  border-top: 0.1px var(--white) solid;
+  border-bottom: 0.1px var(--white) solid;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:visited
+{
+  color: var(--links-hover)!important;
+  font-size: 2.5rem!important;
+  font-weight: 600!important;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand
+{
+  pointer-events: none;
+}
+/* FIN HEADER */
+
+/* INICIO HOME */
+.jumbotron
+{
+  margin-bottom: 0 !important;
+}
+.height100p
+{
+  height: 100vh;
+}
+.banner
+{
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--img-home);
+  background-size: cover;
+  background-position: left;
+  margin-bottom: 0;
+}
+.banner:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(var(--black), transparent);
+  pointer-events: none;
+}
+.banner:before,
+.sec:before,
+.contact:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(var(--black), transparent);
+  pointer-events: none;
+}
+.banner:after,
+.sec:after,
+.contact:after
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(360deg, var(--black), transparent);
+  pointer-events: none;
+}
+.height100p
+{
+  height: 100vh;
+}
+.h100
+{
+  height: 100%;
+}
+.contentBox
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+.contentBox h1
+{
+
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+.contentBox p
+{
+  color: var(--white);
+  font-size: 1.3rem;
+}
+/* FIN HOME */
+
+/* INICIO SERVICIOS */
+section{
+  padding: 100px 0;
+}
+.servicios{
+  background: var(--black);
+}
+.row
+{
+justify-content: center;
+}
+.headerText h2
+{
+font-size: 2.5rem;
+margin-bottom: 20px;
+color: var(--white);
+}
+.headerText p
+{
+color: var(--white);
+}
+.servBox
+{
+position: relative;
+max-width: 300px;
+height: 400px;
+margin: 0 auto;
+background: var(--black);
+margin-top: 30px;
+overflow: hidden;
+}
+.servBox .imgBx
+{
+width: 100%;
+height: 100%;
+}
+.servBox .imgBx img
+{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.servBox .content
+{
+position: absolute;
+top: 0;
+left: 0; 
+width: 100%;
+height: 100%;
+display: flex;
+align-items: flex-end;
+}
+.servBox .content h3
+{
+position: relative;
+margin: 0;
+padding: 10px;
+background: var(--bg-descripcion);
+color: var(--white);
+font-size: 20px;
+font-weight: 600;
+width: 100%;
+text-align: center;
+}
+.servBox .content h3 span
+{
+font-size: 16px;
+font-weight: 500;
+}
+/* FIN SERVICIOS */
+
+/* INICIO EXPERIENCIA */
+.experiencia
+{
+    background-color: var(--black);
+}
+
+.expBox{
+    position: relative;
+    max-width: 300px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-card);
+}
+.expBox .imgBx
+{
+  width: 100%;
+  height: 100%;
+}
+.expBox .imgBx img
+{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.expBox .content
+{
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.expBox .content h3
+{
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+.expBox .content h3 span
+{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white)
+}
+/* FIN EXPERIENCIA */
+
+/* INICIO FOOTER */
+footer
+{
+  background: var(--black);
+  padding: 50px 0 0;
+}
+.redes-sociales{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.redes-sociales li{
+    list-style: none;
+}
+.redes-sociales li a{
+    color: var(--links);
+    font-size: 2em;
+    transition: 0.5s;
+}
+.redes-sociales li a:hover{
+    color: var(--white);
+}
+.cpryt
+{
+  color: var(--gray);
+  text-align: center;
+  margin-top: 20px;
+}
+.cpryt a,
+.cpryt a:hover
+{
+  color: var(--white);
+}
+/* FIN FOOTER */
